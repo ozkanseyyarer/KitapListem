@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.add_menu_add_book) {
             //intent geçişi olucak burada
             Intent addBookIntent = new Intent(MainActivity.this, AddBookActivity.class);
+            finish();
             startActivity(addBookIntent);
         }
         return super.onOptionsItemSelected(item);
@@ -56,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 kitapDetayi = new KitapDetayi(kitap.getKitapAdi(), kitap.getKitapYazari(), kitap.getKitapOzeti(), kitap.getKitapResim());
 
                 Intent intent = new Intent(MainActivity.this, DetayActivity.class);
-                finish();
                 startActivity(intent);
 
             }
