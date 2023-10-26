@@ -20,10 +20,10 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_width="240dp"
+                android:layout_width="wrap_content"
                 android:src="@drawable/click"
                 android:scaleType="fitXY"
-                android:layout_height="300dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/activity_add_book_imageViewKitapResmi"/>
 
             <EditText

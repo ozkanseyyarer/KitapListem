@@ -42,6 +42,7 @@ public class KitapAdapter extends RecyclerView.Adapter<KitapAdapter.kitapHolder>
         holder.setData(kitap);
 
 
+
     }
 
     @Override
@@ -59,8 +60,8 @@ public class KitapAdapter extends RecyclerView.Adapter<KitapAdapter.kitapHolder>
 
 
             txtKitapAdi = itemView.findViewById(R.id.kitap_item_textViewKitapAdi);
-            txtKitapYazari = itemView.findViewById(R.id.kitap_item_textViewKitapYazari);
-            txtKitapOzeti = itemView.findViewById(R.id.kitap_item_textViewKitapOzeti);
+         //  txtKitapYazari = itemView.findViewById(R.id.kitap_item_textViewKitapYazari);
+           // txtKitapOzeti = itemView.findViewById(R.id.kitap_item_textViewKitapOzeti);
             imgKitapResim = itemView.findViewById(R.id.kitap_item_imageViewKitapResim);
 
 
@@ -79,9 +80,9 @@ public class KitapAdapter extends RecyclerView.Adapter<KitapAdapter.kitapHolder>
 
 
         public void setData(Kitap kitap) {
-            this.txtKitapAdi.setText(kitap.getKitapAdi());
-            this.txtKitapYazari.setText(kitap.getKitapYazari());
-            this.txtKitapOzeti.setText(kitap.getKitapOzeti());
+           this.txtKitapAdi.setText(kitap.getKitapAdi());
+           // this.txtKitapYazari.setText(kitap.getKitapYazari());
+          //this.txtKitapOzeti.setText(kitap.getKitapOzeti());
             this.imgKitapResim.setImageBitmap(kitap.getKitapResim());
         }
 

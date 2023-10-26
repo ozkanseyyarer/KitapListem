@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.KitapListem" parent="Base.Theme.KitapListem" />
+
 </resources>

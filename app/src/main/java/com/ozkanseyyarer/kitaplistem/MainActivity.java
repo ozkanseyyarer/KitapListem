@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.Intent;
 import android.graphics.Rect;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,17 +40,22 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         mRecyclerView = findViewById(R.id.main_activiy_recyclerView);
         adapter = new KitapAdapter(Kitap.getData(this), this);
         mRecyclerView.setHasFixedSize(true);
 
-        GridLayoutManager manager = new GridLayoutManager(this, 1);
+
+        StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(manager);
-        mRecyclerView.addItemDecoration(new GridManagerDecoration());
+       // mRecyclerView.addItemDecoration(new GridManagerDecoration());
         mRecyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new KitapAdapter.OnItemClickListener() {
